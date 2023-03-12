@@ -1,14 +1,6 @@
 {
-  const tasks = [
-    {
-      content: "zrobić notatki",
-      done: false,
-    },
-    {
-      content: "wyprowadzić psa",
-      done: true,
-    },
-  ];
+  const tasks = [];
+
   const toggleTaskDone = (index) => {
     tasks[index].done = !tasks[index].done;
     render();
@@ -41,10 +33,10 @@
       htmlString += ` <li
        ${task.done ? 'style="text-decoration: line-through"' : ""}
       >
-      <button class="js-done">✅</button>
+      <button class="buttonDone js-done">✓</button>
       ${task.content}
       
-      <button class="js-removeTask">🗑️</button>
+      <button class="buttonRemove js-removeTask">🗑️</button>
 
       </li>`;
     }
@@ -68,14 +60,13 @@
     if (newTaskContent === "") {
       return;
     }
+
     addNewTask(newTaskContent);
   };
 
   const init = () => {
     render();
-
     const form = document.querySelector(".js-form");
-
     form.addEventListener("submit", onFormSubmit);
   };
   init();

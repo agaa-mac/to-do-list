@@ -8,19 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body class="body">
     <header class="header"><h1 class="header__header">Lista zadań</h1></header>
     <main class="main">
-      <form class="form js-form">
-        <h2 class="form__header">Dodaj nowe zadanie</h2>
+      <h2 class="main__header">Dodaj nowe zadanie</h2>
 
+      <form class="form js-form">
         <input type="text" class="form__newTask js-newTask" />
-        <button class="button">Dodaj zadanie</button>
+        <button class="buttonAddNewTask js-buttonAddNewTask">
+          Dodaj zadanie
+        </button>
       </form>
       <ul class="main__result js-tasks"></ul>
     </main>

@@ -1,3 +1,58 @@
 .body {
+  max-width: 600px;
+  margin: 0 auto;
   font-family: "Lato", sans-serif;
+  background-color: rgb(241, 240, 241);
+}
+
+.header__header {
+  margin-top: 50px;
+}
+.main__header,
+.form {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.main__header {
+  font-size: 17px;
+  padding: 12px 15px 15px;
+  margin-bottom: 0;
+}
+.form {
+  margin-top: 2px;
+  padding: 15px;
+}
+.form__newTask {
+  width: 78%;
+  opacity: 0.2;
+  padding: 4px 0;
+}
+.buttonAddNewTask {
+  font-weight: 100;
+  width: 18%;
+  margin-left: 10px;
+  padding: 6px 5px;
+  background-color: rgb(2, 127, 142);
+  border: 1px solid rgb(2, 127, 142);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+.buttonDone {
+  background-color: rgb(29, 134, 35);
+  border: 1px solid rgb(29, 134, 35);
+  padding: 2px 5px;
+  color: rgb(255, 255, 255);
+}
+
+.buttonRemove {
+  background-color: rgb(239, 47, 71);
+  border: 1px solid rgb(239, 47, 71);
+}
+
+.form__newTask:focus {
+  outline: none;
+  border: 1px solid black;
+  opacity: 1;
+  border-radius: 2px;
 }
