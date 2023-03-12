@@ -17,6 +17,23 @@
     tasks.splice(index, 1);
     render();
   };
+  const bindEvents = () => {
+    const removeDoneTask = document.querySelectorAll(".js-removeTask");
+
+    removeDoneTask.forEach((removeDoneTask, index) => {
+      removeDoneTask.addEventListener("click", () => {
+        removeTask(index);
+      });
+    });
+
+    const toggleDoneButton = document.querySelectorAll(".js-done");
+
+    toggleDoneButton.forEach((toggleDoneButton, index) => {
+      toggleDoneButton.addEventListener("click", () => {
+        toggleTaskDone(index);
+      });
+    });
+  };
   const render = () => {
     let htmlString = "";
 
@@ -34,21 +51,7 @@
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
 
-    const removeDoneTask = document.querySelectorAll(".js-removeTask");
-
-    removeDoneTask.forEach((removeDoneTask, index) => {
-      removeDoneTask.addEventListener("click", () => {
-        removeTask(index);
-      });
-    });
-
-    const toggleDoneButton = document.querySelectorAll(".js-done");
-
-    toggleDoneButton.forEach((toggleDoneButton, index) => {
-      toggleDoneButton.addEventListener("click", () => {
-        toggleTaskDone(index);
-      });
-    });
+    bindEvents();
   };
 
   const addNewTask = (newTaskContent) => {
