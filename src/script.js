@@ -1,5 +1,5 @@
 {
-  const task = [
+  const tasks = [
     {
       content: "zrobić notatki",
       done: false,
@@ -9,7 +9,17 @@
       done: true,
     },
   ];
+  const render = () => {
+    let htmlString = "";
 
-  const init = () => {};
+    for (const task of tasks) {
+      htmlString += ` <li>${task.content}</li>`;
+    }
+
+    document.querySelector(".js-tasks").innerHTML = htmlString;
+  };
+  const init = () => {
+    render();
+  };
   init();
 }
