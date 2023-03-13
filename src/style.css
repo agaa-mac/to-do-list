@@ -1,10 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
 .body {
   max-width: 900px;
   margin: 0 auto;
   font-family: "Lato", sans-serif;
   background-color: rgb(241, 240, 241);
 }
-
 .header__header {
   margin-top: 50px;
 }
@@ -35,19 +42,18 @@
   padding: 10px 0;
   border-bottom: 2px solid rgb(241, 240, 241);
 }
-
 .form {
   margin: 1px 0 8px;
   padding: 15px;
+  display: grid;
+  grid-template-columns: 6fr 1fr;
 }
 .form__newTask {
-  width: 78%;
   opacity: 0.2;
   padding: 4px 0;
 }
 .buttonAddNewTask {
-  font-weight: 100;
-  width: 18%;
+  font-weight: 300;
   margin-left: 10px;
   padding: 6px 5px;
   background-color: rgb(2, 127, 142);
@@ -62,16 +68,35 @@
   color: rgb(29, 134, 35);
   align-self: end;
 }
-
 .buttonRemove {
   background-color: rgb(239, 47, 71);
   border: 1px solid rgb(239, 47, 71);
   align-self: end;
 }
-
 .form__newTask:focus {
   outline: none;
   border: 1px solid black;
   opacity: 1;
   border-radius: 2px;
+}
+@media (max-width: 900px) {
+  .body {
+    margin: 20px;
+  }
+}
+@media (max-width: 820px) {
+  .form {
+    grid-template-columns: 6fr 2fr;
+  }
+}
+@media (max-width: 500px) {
+  .header__header {
+    margin-top: 40px;
+  }
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .buttonAddNewTask {
+    margin: 10px 0px;
+  }
 }
