@@ -30,12 +30,15 @@
     let htmlString = "";
 
     for (const task of tasks) {
-      htmlString += ` <li
-       ${task.done ? 'style="text-decoration: line-through"' : ""}
+      htmlString += ` <li class="result"
       >
-      <button class="buttonDone js-done">✓</button>
+      <button class="buttonDone js-done" 
+       ${task.done ? 'style="color: white"' : ""}>✓</button>
+      <span class="taskContent"${
+        task.done ? 'style="text-decoration: line-through"' : ""
+      }>
       ${task.content}
-      
+      </span>
       <button class="buttonRemove js-removeTask">🗑️</button>
 
       </li>`;
