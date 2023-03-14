@@ -39,7 +39,7 @@ html {
 .result {
   display: grid;
   grid-template-columns: 25px 1fr 25px;
-  padding: 10px 0;
+  padding: 20px 0 10px;
   border-bottom: 2px solid rgb(241, 240, 241);
 }
 .form {
