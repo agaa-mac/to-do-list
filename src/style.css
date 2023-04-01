@@ -66,6 +66,10 @@ html {
   padding: 2px 5px;
 }
 
+.list__item--hidden {
+  display: none;
+}
+
 .list__button--buttonDone {
   background-color: rgb(29, 134, 35);
   border: 1px solid rgb(29, 134, 35);
