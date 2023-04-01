@@ -69,8 +69,9 @@
     if (newTaskContent === "") {
       return;
     }
-    const resetContent = document.querySelector(".js-newTask");
-    resetContent.value = "";
+    const newTask = document.querySelector(".js-newTask");
+    newTask.value = "";
+    newTask.focus();
     addNewTask(newTaskContent);
   };
 
