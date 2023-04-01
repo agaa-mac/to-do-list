@@ -30,7 +30,7 @@
     let htmlString = "";
 
     for (const task of tasks) {
-      htmlString += ` <li class="result"
+      htmlString += ` <li class="list__item"
       >
       <button class="buttonDone js-done" 
        ${task.done ? 'style="color: white"' : ""}>✓</button>
