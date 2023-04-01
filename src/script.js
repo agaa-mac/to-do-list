@@ -26,26 +26,31 @@
       });
     });
   };
-  const render = () => {
+  const bindButtonsEvents = () => {};
+  const renderButtons = () => {};
+  const renderTasks = () => {
     let htmlString = "";
 
     for (const task of tasks) {
       htmlString += ` <li class="list__item"
       >
-      <button class="buttonDone js-done" 
+      <button class="list__button list__button--buttonDone js-done" 
        ${task.done ? 'style="color: white"' : ""}>✓</button>
       <span class="taskContent"${
         task.done ? 'style="text-decoration: line-through"' : ""
       }>
       ${task.content}
       </span>
-      <button class="buttonRemove js-removeTask">🗑️</button>
+      <button class="list__button list__button--buttonRemove js-removeTask">🗑️</button>
 
       </li>`;
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
+  };
 
+  const render = () => {
+    renderTasks();
     bindEvents();
   };
 
@@ -55,6 +60,7 @@
     });
     render();
   };
+
   const onFormSubmit = (event) => {
     event.preventDefault();
 
@@ -63,7 +69,8 @@
     if (newTaskContent === "") {
       return;
     }
-
+    const resetContent = document.querySelector(".js-newTask");
+    resetContent.value = "";
     addNewTask(newTaskContent);
   };
 
