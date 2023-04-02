@@ -118,4 +118,12 @@ html {
   .form__buttonAddNewTask {
     margin: 10px 0px;
   }
+  .tasksNamesList {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .buttons__button {
+    margin-bottom: 10px;
+    font-size: smaller;
+  }
 }
