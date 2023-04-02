@@ -8,5 +8,5 @@ The page was hosted on GitHub Pages: https://a-maczynska.github.io/to-do-list/
 
 
 
-![page screenshot](https://raw.githubusercontent.com/a-maczynska/to-do-list/d44a1fa33fa61712f3f799b834d1d3cc51b1c4cf/src/images/To-Do-List.png)
+![page screenshot](https://github.com/agaa-mac/to-do-list/blob/main/src/images/To-Do-List.png?raw=true)
 
