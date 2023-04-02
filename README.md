@@ -4,7 +4,7 @@
 The website user can add to the task list many tasks that the user wants to perform.
 Buttons added to each task allow the user to mark the task as done and remove it from the list.
 
-The page was hosted on GitHub Pages: https://a-maczynska.github.io/to-do-list/
+The page was hosted on GitHub Pages: https://agaa-mac.github.io/to-do-list/
 
 
 
