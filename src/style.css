@@ -19,14 +19,15 @@ html {
 .form,
 .list {
   background-color: white;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.subHeader {
+.subHeader,
+.buttons {
   font-size: 17px;
   padding: 12px 15px 15px;
   margin: 0 auto;
 }
+
 .list {
   margin-top: 1px;
   padding: 30px;
@@ -84,6 +85,18 @@ html {
   border: 1px solid black;
   opacity: 1;
   border-radius: 2px;
+}
+.tasksNamesList {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.buttons__button {
+  color: rgb(2, 127, 142);
+  background-color: white;
+  border: none;
 }
 @media (max-width: 900px) {
   .body {
