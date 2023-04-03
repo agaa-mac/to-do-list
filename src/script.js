@@ -21,16 +21,10 @@
   };
 
   const allTasksDone = () => {
-    tasks = tasks.map((task) => {
-      if (task.done) {
-        return task;
-      } else {
-        return {
-          ...task,
-          done: true,
-        };
-      }
-    });
+    tasks = tasks.map((task) => ({
+      ...task,
+      done: true,
+    }));
     render();
   };
 
@@ -39,6 +33,7 @@
 
     render();
   };
+
   const bindEvents = () => {
     const removeDoneTask = document.querySelectorAll(".js-removeTask");
 
@@ -56,6 +51,7 @@
       });
     });
   };
+
   const bindButtonsEvents = () => {
     const markAllDoneButton = document.querySelector(".js-markAllDone");
 
@@ -74,6 +70,7 @@
 
   const renderButtons = () => {
     const buttonsElement = document.querySelector(".js-buttons");
+
     if (tasks.length < 1) {
       buttonsElement.innerHTML = "";
       return;
@@ -82,11 +79,12 @@
     buttonsElement.innerHTML = `
     
     <button class = "buttons__button js-toogleHideDoneTasks">
+
       ${hideTasks ? "Pokaz" : "Ukryj"} ukończone </button>
-<button class="buttons__button js-markAllDone" ${
+
+    <button class="buttons__button js-markAllDone" ${
       tasks.every(({ done }) => done) ? "disabled" : ""
-    } > 
-Ukończ wszystkie </button>
+    } > Ukończ wszystkie </button>
 
     `;
   };
@@ -129,21 +127,25 @@ Ukończ wszystkie </button>
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    const newTaskContent = document.querySelector(".js-newTask").value.trim();
+    const newTaskElement = document.querySelector(".js-newTask");
 
-    if (newTaskContent === "") {
-      return;
+    const newTaskContent = newTaskElement.value.trim();
+
+    if (newTaskContent) {
+      addNewTask(newTaskContent);
     }
-    const newTask = document.querySelector(".js-newTask");
-    newTask.value = "";
-    newTask.focus();
-    addNewTask(newTaskContent);
+
+    newTaskContent.value = "";
+    newTaskContent.focus();
   };
 
   const init = () => {
     render();
+
     const form = document.querySelector(".js-form");
+
     form.addEventListener("submit", onFormSubmit);
   };
+
   init();
 }
